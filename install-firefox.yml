@@ -1,0 +1,9 @@
+---
+- name: Install firefox
+  hosts: loc
+  tasks:
+   - yum:
+      name: firefox
+      state: present
+     when: ansible_os_family == "CentOS"
+...
